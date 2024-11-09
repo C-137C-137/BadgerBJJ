@@ -13,6 +13,7 @@ namespace BadgerBJJ.Appointments
             services.AddControllersWithViews();
 
 
+
         }
     }
 }
