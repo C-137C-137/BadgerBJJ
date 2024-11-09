@@ -1,0 +1,11 @@
+{
+  "name": "BadgerBJJ Appointments",
+  "id": "BadgerBJJ.Appointments",
+  "description": "Appointment management module for BJJ classes",
+  "category": "Content Management",
+  "version": "1.0.0",
+  "author": "Bánfi Konrád",
+  //"website": "",
+  //"dependencies": [],
+  "tags": [ "appointments", "scheduling" ]
+}

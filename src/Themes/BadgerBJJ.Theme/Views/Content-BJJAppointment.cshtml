@@ -1,0 +1,31 @@
+@model ContentItem
+@{
+    var appointment = Model.Content.BJJAppointment as dynamic;
+    var registeredCount = (int)(appointment.RegisteredEmails?.Count ?? 0);
+    var maxParticipants = (int)(appointment.MaxParticipants ?? 0);
+    var availableSpots = maxParticipants - registeredCount;
+}
+<div class="appointment-card">
+    <h2>@Model.DisplayText</h2>
+    <div class="appointment-details">
+        <p>Date: @appointment.AppointmentDate</p>
+        <p>Instructor: @appointment.InstructorName</p>
+        <p>Class Type: @appointment.ClassType</p>
+        <p>Available Spots: @availableSpots</p>
+        @if (registeredCount < maxParticipants)
+        {
+            <form asp-action="Register" asp-controller="Appointment" method="post">
+                <input type="hidden" name="appointmentId" value="@Model.ContentItemId" />
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Register for Class</button>
+            </form>
+        }
+        else
+        {
+            <p class="class-full">This class is currently full.</p>
+        }
+    </div>
+</div>

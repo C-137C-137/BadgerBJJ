@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,14 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="wwwroot\css\styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\css\styles.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.8.2" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.8.2" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.8.2" />
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.8.2" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="2.0.2" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="2.0.2" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="2.0.2" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="2.0.2" />
+	<PackageReference Include="OrchardCore.Abstractions" Version="2.0.2" />
   </ItemGroup>
 
 </Project>

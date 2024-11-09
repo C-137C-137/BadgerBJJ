@@ -5,43 +5,75 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B9B6F70-D7C8-48D7-B738-696AF8E4D168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerBJJ.Web", "src\BadgerBJJ.Web\BadgerBJJ.Web.csproj", "{3170E702-4770-4A90-BE06-EC6183D01872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BadgerBJJ.Web", "src\BadgerBJJ.Web\BadgerBJJ.Web.csproj", "{3170E702-4770-4A90-BE06-EC6183D01872}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2B7D39C8-32DE-4352-909B-39CA197E71A1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerBJJ.Module", "src\Modules\BadgerBJJ.Module\BadgerBJJ.Module.csproj", "{131EDA4A-EA5E-4A9C-B068-B910A214D88E}"
+	ProjectSection(SolutionItems) = preProject
+		BJJAppointment.cs = BJJAppointment.cs
+		Manifest.json = Manifest.json
+		Startup.cs = Startup.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{44C0E7FE-91DA-44AC-A12C-5380CF04C2BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerBJJ.Theme", "src\Themes\BadgerBJJ.Theme\BadgerBJJ.Theme.csproj", "{EF5E3806-68E0-49BE-993D-50F2B0635E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BadgerBJJ.Theme", "src\Themes\BadgerBJJ.Theme\BadgerBJJ.Theme.csproj", "{EF5E3806-68E0-49BE-993D-50F2B0635E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerBJJ.Appointments", "BadgerBJJ.Appointments\BadgerBJJ.Appointments.csproj", "{8F370114-40F7-44BD-B204-46E48F916E67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{BAB6C6DD-0FD4-4EE5-840C-5811160EC355}"
+	ProjectSection(SolutionItems) = preProject
+		BJJAppointment.cs = BJJAppointment.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{142A4F21-2DFB-4A95-86A2-B3A7E1A09182}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{4F1C7AF7-04E3-4DA8-B5B0-819072FA90D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{74FF7E24-3FAE-403B-82A4-8E8CED5287E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{55F02848-2111-4EEB-BAC4-9084D863B37F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{239F0DEE-2BF9-44A9-860D-16DE1805F2C8}"
+	ProjectSection(SolutionItems) = preProject
+		AppointmentMigrations.cs = AppointmentMigrations.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3170E702-4770-4A90-BE06-EC6183D01872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3170E702-4770-4A90-BE06-EC6183D01872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3170E702-4770-4A90-BE06-EC6183D01872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3170E702-4770-4A90-BE06-EC6183D01872}.Release|Any CPU.Build.0 = Release|Any CPU
-		{131EDA4A-EA5E-4A9C-B068-B910A214D88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{131EDA4A-EA5E-4A9C-B068-B910A214D88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{131EDA4A-EA5E-4A9C-B068-B910A214D88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{131EDA4A-EA5E-4A9C-B068-B910A214D88E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF5E3806-68E0-49BE-993D-50F2B0635E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF5E3806-68E0-49BE-993D-50F2B0635E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5E3806-68E0-49BE-993D-50F2B0635E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF5E3806-68E0-49BE-993D-50F2B0635E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F370114-40F7-44BD-B204-46E48F916E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F370114-40F7-44BD-B204-46E48F916E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F370114-40F7-44BD-B204-46E48F916E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F370114-40F7-44BD-B204-46E48F916E67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3170E702-4770-4A90-BE06-EC6183D01872} = {7B9B6F70-D7C8-48D7-B738-696AF8E4D168}
 		{2B7D39C8-32DE-4352-909B-39CA197E71A1} = {7B9B6F70-D7C8-48D7-B738-696AF8E4D168}
-		{131EDA4A-EA5E-4A9C-B068-B910A214D88E} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
 		{44C0E7FE-91DA-44AC-A12C-5380CF04C2BF} = {7B9B6F70-D7C8-48D7-B738-696AF8E4D168}
 		{EF5E3806-68E0-49BE-993D-50F2B0635E88} = {44C0E7FE-91DA-44AC-A12C-5380CF04C2BF}
+		{8F370114-40F7-44BD-B204-46E48F916E67} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{BAB6C6DD-0FD4-4EE5-840C-5811160EC355} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{142A4F21-2DFB-4A95-86A2-B3A7E1A09182} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{4F1C7AF7-04E3-4DA8-B5B0-819072FA90D4} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{74FF7E24-3FAE-403B-82A4-8E8CED5287E2} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{55F02848-2111-4EEB-BAC4-9084D863B37F} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+		{239F0DEE-2BF9-44A9-860D-16DE1805F2C8} = {2B7D39C8-32DE-4352-909B-39CA197E71A1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E81196E-DB79-4092-A9D6-0B2A61027B42}
 	EndGlobalSection
 EndGlobal
