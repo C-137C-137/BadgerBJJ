@@ -12,6 +12,7 @@ namespace BadgerBJJ.Appointments
             services.AddScoped<IYourService, YourService>();
             services.AddControllersWithViews();
 
+
         }
     }
 }
