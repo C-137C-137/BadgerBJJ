@@ -40,4 +40,5 @@ public class AppointmentMigrations : DataMigration
 
         return 1;
     }
+    #test commit
 }
