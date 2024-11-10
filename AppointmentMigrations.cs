@@ -38,6 +38,7 @@ public class AppointmentMigrations : DataMigration
             .Versionable()
         );
 
+
         return 1;
     }
 }
