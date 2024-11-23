@@ -1,0 +1,33 @@
+@model ContentItem
+@{
+    ViewData["Title"] = "Schedule";
+}
+@{
+    Layout = "~/Themes/BadgerBJJ.MainTheme/Views/Layout.cshtml";
+}
+
+<div class="appointment-card">
+    <h2>Take an appointment:</h2>
+    <div class="schedule-page">
+        <p>Date: @Model.Content.BJJAppointment.AppointmentDate</p>
+        <p>Instructor: @Model.Content.BJJAppointment.InstructorName</p>
+        <p>Class Type: @Model.Content.BJJAppointment.ClassType</p>
+        <p>Available Spots: @(Model.Content.BJJAppointment.MaxParticipants - Model.Content.BJJAppointment.RegisteredEmails.Count)</p>
+
+        @if (Model.Content.BJJAppointment.RegisteredEmails.Count < Model.Content.BJJAppointment.MaxParticipants)
+        {
+            <form asp-action="Register" asp-controller="Appointment" method="post">
+                <input type="hidden" name="appointmentId" value="@Model.ContentItemId" />
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required />
+                </div>
+                <button type="submit">Register for Class</button>
+            </form>
+        }
+        else
+        {
+            <p class="class-full">This class is currently full.</p>
+        }
+    </div>
+</div>

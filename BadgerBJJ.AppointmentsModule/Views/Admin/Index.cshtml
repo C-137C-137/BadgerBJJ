@@ -1,0 +1,30 @@
+
+
+@* <h2>BJJ Schedule Management</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Date/Time</th>
+            <th>Instructor</th>
+            <th>Max Participants</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Content.TitlePart.Title</td>
+                <td>@item.Content.DateTime.Value</td>
+                <td>@item.Content.InstructorName.Text</td>
+                <td>@item.Content.MaxParticipants.Value</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ContentItemId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ContentItemId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> *@

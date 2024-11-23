@@ -1,32 +1,41 @@
 using OrchardCore.Logging;
+using static OpenIddict.Abstractions.OpenIddictConstants.Permissions;
+using Microsoft.AspNetCore.Mvc;
+using OrchardCore.Navigation;
+using BadgerBJJ.AppointmentsModule.AdminMenu;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseNLogHost();
 
 builder.Services
-    .AddOrchardCms()
-    // // Orchard Specific Pipeline
-    // .ConfigureServices( services => {
-    // })
-    // .Configure( (app, routes, services) => {
-    // })
-;
+    .AddOrchardCms() 
+    .ConfigureServices(services =>
+    {
+        
+    })
+    .Configure((app, routes, services) =>
+    {
+        routes.MapAreaControllerRoute(
+        name: "Home",
+        areaName: "BadgerBJJ.MainTheme",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        routes.MapAreaControllerRoute(
+        name: "Home",
+        areaName: "BadgerBJJ.MainTheme",
+        pattern: "{controller}/{action}/{id?}",
+        defaults: new { controller = "Home", action = "Index" });
+    });
 
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseOrchardCore();
-
+app.UseStaticFiles(); 
+app.UseOrchardCore();  
 app.Run();
-
-// initial commit

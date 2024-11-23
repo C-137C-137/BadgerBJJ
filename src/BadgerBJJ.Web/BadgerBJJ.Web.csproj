@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+	<!--<AddRazorSupportForMvc>true</AddRazorSupportForMvc>-->
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,9 +20,12 @@
   <ItemGroup>
     <PackageReference Include="OrchardCore.Logging.NLog" Version="2.0.2" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="2.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-	<ProjectReference Include="..\Themes\BadgerBJJ.Theme\BadgerBJJ.Theme.csproj" />
+	<PackageReference Include="OrchardCore" Version="2.0.2" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BadgerBJJ.AppointmentsModule\BadgerBJJ.AppointmentsModule.csproj" />
+    <ProjectReference Include="..\..\BadgerBJJ.MainTheme\BadgerBJJ.MainTheme.csproj" />
+  </ItemGroup>
 </Project>
